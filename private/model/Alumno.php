@@ -1,6 +1,6 @@
 <?php
 
-require_once "../private/core/Database.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/../private/core/Database.php";
 
 class Alumno extends Database {
     
@@ -19,10 +19,9 @@ class Alumno extends Database {
 		catch(PDOException $e) {
 			echo $e->getMessage();
         }
-        var_dump($alumnos);
         foreach ($alumnos as $a) {
             echo ('<p>Alumno: ' . $a['nombre'] . '</p>');
         }
     }
-    
+
 }
