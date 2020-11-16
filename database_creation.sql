@@ -43,4 +43,22 @@ CREATE TABLE aplicaciones (
 );
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password)
-VALUES ('Pepe', 'pepegmail.com', 3, 120, 1, 'contrasena');
+VALUES ('Pepe', 'pepe@gmail.com', 3, 120, 1, 'contrasena');
+
+INSERT INTO organizaciones (nombre, email, password)
+VALUES ('Unidos', 'unidos@gmail.com', 'contrasena');
+
+INSERT INTO organizaciones (nombre, email, password)
+VALUES ('Sinergia', 'sinergia@gmail.com', 'contrasena');
+
+INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id)
+VALUES ('Campamento Unidos', 10, 'Martes', 'Enero', 1);
+
+INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id)
+VALUES ('Proyecto Unidos', 11, 'Jueves', 'Marzo', 1);
+
+INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id)
+VALUES ('Curso de verano', 12, 'Lunes', 'Mayo', 1);
+
+INSERT INTO administradores (nombre, email, password)
+VALUES ('Iara', 'iara@up.edu.mx', 'contrasena');
