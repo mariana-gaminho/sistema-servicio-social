@@ -5,6 +5,10 @@ if (session_status() == PHP_SESSION_NONE ) {
     session_start();
 }
 
+if (null === $_SESSION['login_organizacion'] || !$_SESSION['login_organizacion']) {
+    header('Location:/');
+}
+
 $o = new Organizacion();
 $alumnos_organizacion = $o -> get_alumnos_proyectos($_SESSION['id_organizacion']);
 $proyectos = $o->get_proyectos($_SESSION['id_organizacion']);
@@ -35,12 +39,20 @@ $proyectos = $o->get_proyectos($_SESSION['id_organizacion']);
             } else {
                 foreach ($proyectos as $proyecto) {
                     echo '
-                    <div style="border-style: solid">
+                    <div style="border-style: solid; min-height:50px">
                         ' . $proyecto['nombre'] . '
+                        <a href="/organizacion/detalle_proyecto.php?id='. $proyecto['proyecto_id'] .'">
+                        <input type="button" class="btn btn-success" style="float:right; margin:3px" value="Detalles">
+                        </a>
                     </div>
                     ';
                 }
             }
+            echo '
+                <a href="/organizacion/proyectos.php">
+                <input type="button" class="btn btn-success" style="float:right; margin:3px" value="Ver todos">
+                </a>
+            ';
             ?>
         </div>
     </div>
@@ -48,6 +60,12 @@ $proyectos = $o->get_proyectos($_SESSION['id_organizacion']);
     <div class="col-xs-12 col-md-5" id="informacion_organizacion">
         <p>INFORMACIÓN</p>
         <div style="border-style: solid; min-height: 300px">
+            <div style="border-style: solid">
+                Organización: <?php echo $_SESSION['nombre_organizacion']; ?>
+            </div>
+            <div style="border-style: solid">
+                Email: <?php echo $_SESSION['email_organizacion']; ?>
+            </div>
         </div>
     </div>
 </div>
