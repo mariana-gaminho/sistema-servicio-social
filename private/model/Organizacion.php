@@ -26,7 +26,8 @@ class Organizacion extends Database {
 
     public function login_organizacion() { //Código de Rodrigo
 		try {
-
+            session_unset();
+            
             $email = $_POST['email_organizacion'];
             $pwd = $_POST['pwd_organizacion'];
             
