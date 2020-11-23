@@ -1,39 +1,31 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Proyecto.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();
 }
 
-$proyecto_valido = false;
-
-if (isset($_GET['id']) && isset($_SESSION['login_organizacion']) && $_SESSION['login_organizacion']) {
+if (isset($_GET['id']) && isset($_SESSION['login_admin']) && $_SESSION['login_admin']) {
     $id_proyecto = $_GET['id'];
-    $p = new Proyecto();
-    $proyecto_valido = $p->valida_proyecto_organizacion($id_proyecto, $_SESSION['id_organizacion']);
+    $a = new Admin();
+} else {
+    header('Location:/admin/resumen_proyectos.php');
 }
 
-if (!$proyecto_valido) {
-    //El usuario no tiene acceso a este archivo
-    header('Location:/organizacion');
-}
-
-$proyecto = $p->get_proyecto($id_proyecto);
-$alumnos = $p->get_alumnos_proyecto($id_proyecto);
+$proyecto = $a->get_proyecto($id_proyecto);
+$alumnos = $a->get_alumnos_proyecto($id_proyecto);
 ?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title><?php echo $_SESSION['nombre_organizacion']. '-' .$proyecto['nombre']; ?></title>
+    <title>Detalles Proyecto</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body>
-
-<h4>Detalles del proyecto <?php echo $proyecto['nombre']; ?></h4>
 
 <div class="row">
     <div class="col-xs-12 col-md-5" id="info_proyecto">
@@ -42,12 +34,11 @@ $alumnos = $p->get_alumnos_proyecto($id_proyecto);
         <p>Horas que da el proyecto: <?php echo $proyecto['horas']; ?></p>
         <p>Días: <?php echo $proyecto['dias']; ?></p>
         <p>Fechas: <?php echo $proyecto['fechas']; ?></p>
-        <p>Capacidad: <?php echo $proyecto['capacidad']; ?></p>
     </div>
 
-    <div class="col-xs-12 col-md-7" id="alumnos_proyecto">
+    <div>
         <p>ALUMNOS</p>
-        <div style="border-style: solid; min-height: 300px">
+        <div>
             <!-- Aquí se imprimen los alumnos en proyectos de la organización -->
             <?php
                 if ($alumnos == 0) {

@@ -62,8 +62,16 @@ $proyectos = $o->get_proyectos($_SESSION['id_organizacion']);
                     
                 }
             }
+            
             ?>
         </div>
+        <?php
+        echo '
+            <a href="/organizacion/registrar_proyecto.php">
+            <input type="button" class="btn btn-success" style="float:right; margin:3px" value="Nuevo proyecto">
+            </a>
+        '
+        ?>
     </div>
 </div>
 
