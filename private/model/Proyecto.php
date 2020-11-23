@@ -85,4 +85,30 @@ class Proyecto extends Database {
 		}
     }
 
+    public function registra_proyecto($nombre, $horas, $dias, $fechas, $desc) {
+        
+        try {
+            $query = "INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id, descripcion)
+                        VALUES (:p_nombre, :p_horas, :p_dias, :p_fechas, :p_org_id, :p_desc)";
+            
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->bindParam(':p_nombre', $nombre, PDO::PARAM_STR);
+            $stmt->bindParam(':p_horas', $horas, PDO::PARAM_STR);
+            $stmt->bindParam(':p_dias', $dias, PDO::PARAM_STR);
+            $stmt->bindParam(':p_fechas', $fechas, PDO::PARAM_STR);
+            $stmt->bindParam(':p_org_id', $_SESSION['id_organizacion'], PDO::PARAM_STR);
+            $stmt->bindParam(':p_desc', $desc, PDO::PARAM_STR);
+            
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            
+            return $this->conn->lastInsertId();
+
+        } catch (PDOException $e) {
+            echo "Error in registra_organizacion: " . $e->getMessage();
+            return 0;
+        }
+    }
+
 }

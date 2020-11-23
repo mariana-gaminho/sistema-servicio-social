@@ -122,4 +122,29 @@ class Organizacion extends Database {
             echo "Error in get_proyectos: " . $e->getMessage();
         }
     }
+
+    public function registra_organizacion($nombre, $email, $pwd) {
+        session_unset();
+        try {
+            $query = "INSERT INTO organizaciones (nombre, email, password)
+                        VALUES (:org_nombre, :org_email, :org_password)";
+            
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->bindParam(':org_nombre', $nombre, PDO::PARAM_STR);
+            $stmt->bindParam(':org_email', $email, PDO::PARAM_STR);
+            $stmt->bindParam(':org_password', $pwd, PDO::PARAM_STR);
+            
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            
+            $_SESSION['login_organizacion'] = true;
+			$_SESSION['email_organizacion'] = $email;
+			$_SESSION['nombre_organizacion'] = $nombre;
+            $_SESSION['id_organizacion'] = $this->conn->lastInsertId();
+
+        } catch (PDOException $e) {
+            echo "Error in registra_organizacion: " . $e->getMessage();
+        }
+    }
 }

@@ -126,9 +126,8 @@ div.one {
     </div>
     <div class="col-md-3">
         <p>
-            Derechos Reservados<br>
-            CENTROS CULTURALES DE MEXICO A.C.<br>
-            Aviso de privacidad<br>
+            Inscribir a tu organización<br>
+            <a href="/organizacion/inscripcion.php" style="color:white;text-decoration: underline;">Da click aquí</a>
         </p>
     </div>
 </div>

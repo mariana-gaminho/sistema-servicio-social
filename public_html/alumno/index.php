@@ -4,10 +4,10 @@ if (session_status() == PHP_SESSION_NONE ) {
     session_start();
 }
 
-require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Alumno.php";
-
-echo "Hello!";
-
-var_dump($_SESSION);
+if (null !== $_SESSION['login_alumno'] && $_SESSION['login_alumno']) {
+    header('Location:/alumno/aplicaciones.php');
+} else {
+    header('Location:/');
+}
 
 ?>
