@@ -25,6 +25,7 @@ if(!empty($_GET['Error']))//Quiere entrar un alumno
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <!-- Styles -->
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/style-responsive.css">
 <link rel="stylesheet" href="./css/login-style.css">
 <!-- Icon -->
 <link rel="shortcut icon" href="./img/icono-up.png" />
@@ -35,10 +36,11 @@ if(!empty($_GET['Error']))//Quiere entrar un alumno
 
 <style>
 div.one {
-  border-style: solid;
-  border-color: black;
-  border-radius: 25px;
-  padding: 20px;
+    -webkit-box-shadow: -1px 1px 9px 5px rgba(0,0,0,0.15);
+    -moz-box-shadow: -1px 1px 9px 5px rgba(0,0,0,0.15);
+    box-shadow: -1px 1px 9px 5px rgba(0,0,0,0.15);
+    border-radius: 25px;
+    padding: 20px;
 }
 </style>
 
@@ -111,7 +113,7 @@ div.one {
 
 <div  style="padding-top:15px; height: 100px; color:#FFFFFF; background-color:#0E5184; overflow:auto; display:block; border-radius:5px;">
     <div class="col-md-3">
-        <img src="./img/logo-up.webp" alt="logo" width="300px">
+        <img src="./img/logo-up.png" alt="logo" height="70px">
     </div>
     <div class="col-md-3">
         <p>
