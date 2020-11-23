@@ -6,7 +6,7 @@ $admin->login_admin();
 
 if($_SESSION['login_admin'])
 {
-    header('location:resumen_alumnos.php');
+    header('location:/admin/inicio.php');
 } else {
     header('location:/admin?Error=CredencialesIncorrectas');
 }
