@@ -23,7 +23,8 @@ if(!empty($_GET['Error']))//Quiere entrar un alumno
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/login-style.css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -43,7 +44,7 @@ div.one {
 <body>
 
 
-<h3 style="padding:12px 5px; color:#FFFFFF;vertical-align: middle; height: 50px; background-color: #0E5184">Servicio Social</h3>
+<h3 style="padding:12px 5px; color:#FFFFFF;vertical-align: middle; height: 50px; background-color: #0E5184">SERVICIO SOCIAL</h3>
 
 
 <div class="container-fluid">
@@ -61,7 +62,7 @@ div.one {
                 <form action="/alumno/login_alumno.php" method="post">
                     <h2 class="text-center" >Alumno</h2>
                     <div class="col-md-12">
-                        <img src="./img/students.jpeg" class="img-responsive img-rounded"><br><br>
+                        <img src="./img/alumnos.jpg" class="img-responsive img-rounded"><br><br>
                     </div>
                     <div class="col-md-12">
                         <label for="email_alumno">Correo electrónico:</label><br>
@@ -69,7 +70,9 @@ div.one {
                         <label for="pwd_alumno">Contraseña:</label><br>
                         <input class= "form-control" type="password" id="pwd_alumno" name="pwd_alumno"><br><br>
                         <div class="col text-center">
-                            <button type="submit" class="btn btn-success btn-block">Login</button>
+                            <button type="submit" class="btn btn-block btn-red">
+                                Login
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -88,7 +91,9 @@ div.one {
                         <label for="pwd_organizacion">Contraseña:</label><br>
                         <input class= "form-control" type="password" id="pwd_organizacion" name="pwd_organizacion"> <br><br>
                         <div class="col text-center">
-                            <button type="submit" class="btn btn-success btn-block">Login</button> 
+                            <button type="submit" class="btn btn-block btn-red">
+                                Login
+                            </button> 
                         </div> 
                     </div>
                 </form>
