@@ -20,7 +20,8 @@ CREATE TABLE proyectos (
 	dias varchar(20),
 	fechas varchar(30),
 	organizacion_id varchar(100),
-	descripcion varchar(400)
+	descripcion varchar(400),
+	capacidad INT
 );
 
 CREATE TABLE organizaciones (
@@ -56,14 +57,14 @@ VALUES ('Unidos', 'unidos@gmail.com', 'contrasena');
 INSERT INTO organizaciones (nombre, email, password)
 VALUES ('Sinergia', 'sinergia@gmail.com', 'contrasena');
 
-INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id, descripcion)
-VALUES ('Campamento Unidos', 10, 'Martes', 'Enero', 1, 'Proyecto acerca de un campamento de unidos');
+INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id, descripcion, capacidad)
+VALUES ('Campamento Unidos', 10, 'Martes', 'Enero', 1, 'Proyecto acerca de un campamento de unidos', 5);
 
-INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id, descripcion)
-VALUES ('Proyecto Unidos', 11, 'Jueves', 'Marzo', 1, 'Proyecto acerca de un proyecto de unidos');
+INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id, descripcion, capacidad)
+VALUES ('Proyecto Unidos', 11, 'Jueves', 'Marzo', 1, 'Proyecto acerca de un proyecto de unidos', 10);
 
-INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id, descripcion)
-VALUES ('Curso de verano', 12, 'Lunes', 'Mayo', 1, 'Proyecto acerca de un curso de verano');
+INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id, descripcion, capacidad)
+VALUES ('Curso de verano', 12, 'Lunes', 'Mayo', 1, 'Proyecto acerca de un curso de verano', 3);
 
 INSERT INTO administradores (nombre, email, password)
 VALUES ('Iara', 'iara@up.edu.mx', 'contrasena');

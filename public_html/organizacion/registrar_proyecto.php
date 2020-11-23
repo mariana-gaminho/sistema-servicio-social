@@ -68,6 +68,9 @@ div.one {
                         <label for="descripcion_proyecto">Descripción del proyecto:</label><br>
                         <input class= "form-control" type="text" id="descripcion_proyecto" name="descripcion_proyecto">
 
+                        <label for="capacidad_proyecto">Capacidad del proyecto:</label><br>
+                        <input class= "form-control" type="text" id="capacidad_proyecto" name="capacidad_proyecto">
+
                         <br><span id="error_form" style="color:red;"></span><br><br>
                         <div class="col text-center">
                             <button type="submit" class="btn btn-success btn-block">Registrar</button>
@@ -124,7 +127,8 @@ function validate_form() {
         formulario['horas_proyecto'].value == "" ||
         formulario['dias_proyecto'].value == "" ||
         formulario['fechas_proyecto'].value == "" ||
-        formulario['descripcion_proyecto'].value == "") {
+        formulario['fechas_proyecto'].value == "" ||
+        formulario['capacidad_proyecto'].value == "") {
         document.getElementById('error_form').innerHTML = "Rellena todos los datos."
         validado = false;
     } 

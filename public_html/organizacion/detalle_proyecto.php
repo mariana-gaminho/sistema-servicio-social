@@ -42,6 +42,7 @@ $alumnos = $p->get_alumnos_proyecto($id_proyecto);
         <p>Horas que da el proyecto: <?php echo $proyecto['horas']; ?></p>
         <p>Días: <?php echo $proyecto['dias']; ?></p>
         <p>Fechas: <?php echo $proyecto['fechas']; ?></p>
+        <p>Capacidad: <?php echo $proyecto['capacidad']; ?></p>
     </div>
 
     <div class="col-xs-12 col-md-7" id="alumnos_proyecto">

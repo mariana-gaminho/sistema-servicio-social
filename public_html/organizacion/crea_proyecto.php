@@ -11,9 +11,10 @@ $horas = $_POST['horas_proyecto'];
 $dias = $_POST['dias_proyecto'];
 $fechas = $_POST['fechas_proyecto'];
 $descripcion = $_POST['descripcion_proyecto'];
+$capacidad = $_POST['capacidad_proyecto'];
 
 $p = new Proyecto();
-$new_id = $p->registra_proyecto($nombre, $horas, $dias, $fechas, $descripcion);
+$new_id = $p->registra_proyecto($nombre, $horas, $dias, $fechas, $descripcion, $capacidad);
 
 if($new_id !== 0)
 {
