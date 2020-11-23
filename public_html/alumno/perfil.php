@@ -6,6 +6,8 @@ if (session_status() == PHP_SESSION_NONE ) {
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Alumno.php";
 //require_once $_SERVER['DOCUMENT_ROOT']."/projects/sistema-servicio-social/private/model/Alumno.php";
 //Prueba de que esta cochinada jala
+//Prueba01 de que esta cochinada jala y ahora estoy en la rama
+
 $a = new Alumno();
 
 $alumno = $a -> get_alumno();
