@@ -29,10 +29,17 @@ footer {
   height: 7rem;
 }
 
-/* Estilos de inicio */
-.mini-card {
-  -webkit-box-shadow: -1px 1px 9px 5px rgba(0,0,0,0.15);
-  -moz-box-shadow: -1px 1px 9px 5px rgba(0,0,0,0.15);
-  box-shadow: -1px 1px 9px 5px rgba(0,0,0,0.15);
-  border-radius: 9px;
+/* Alumnos */
+.home {
+  max-width: 20px;
+  filter: invert(100%);
 }
+
+/* Detalle Alumnos */
+.flecha-atras {
+  max-width: 20px;
+  transform: rotate(90deg);
+  filter: invert(100%);
+}
+
+
