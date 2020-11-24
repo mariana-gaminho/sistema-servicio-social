@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();
@@ -34,12 +34,12 @@ $a = new Admin();
     </div>
      <div class="container"> 
         <div class="row d-flex justify-content-center" style="padding-top:30px;">
-            <div class="col-md-6 card" style="overflow:auto;">
+            <div class="col-md-6 card">
                 <div class="d-flex align-items-end" style="padding-bottom: 15px;">
                     <img src="../img/icono-up.png" alt="logo" width="70">
                     <h4 style="margin-left: 10px;">Proyectos</h4>
                 </div>
-                <div> <?php $proyectos = $a->print_proyectos(); ?> </div>
+                <div style="overflow:auto;"> <?php $proyectos = $a->print_proyectos(); ?> </div>
             </div>
         </div>
     </div>

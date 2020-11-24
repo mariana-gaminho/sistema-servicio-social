@@ -5,6 +5,7 @@ if (session_status() == PHP_SESSION_NONE ) {
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Alumno.php";
 //require_once $_SERVER['DOCUMENT_ROOT']."/sistema-servicio-social/private/model/Alumno.php";
+//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Alumno.php";
 
 $a = new Alumno();
 
@@ -18,10 +19,13 @@ $alumno = $a -> get_alumno();
 
 <head>
   <title>Perfil</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="shortcut icon" href="../img/icono-up.png" />
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link href="./../lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/admin-style.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style-responsive.css">
 </head>
 
 
@@ -29,6 +33,7 @@ $alumno = $a -> get_alumno();
 
 <?php
   require ('./../admin/header.php');
+  require('navbar.php')
 ?>
 
 <div class="container-fluid">

@@ -5,6 +5,7 @@ if (session_status() == PHP_SESSION_NONE ) {
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Alumno.php";
 //require_once $_SERVER['DOCUMENT_ROOT']."/sistema-servicio-social/private/model/Alumno.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Alumno.php";
 
 $a = new Alumno();
 
@@ -20,12 +21,12 @@ $alumno = $a -> ver_aplicacion($_SESSION['id_alumno']);
 <html>
 
 <head>
-    <title>Aplicacion</title>
+    <title>Aplicaciones</title>
     <link rel="shortcut icon" href="../img/icono-up.png" />
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="./../lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="../css/admin-style.css">
     <style>
         div.one {
         border-style: solid;
@@ -39,12 +40,14 @@ $alumno = $a -> ver_aplicacion($_SESSION['id_alumno']);
 <?php
     require ('./../admin/header.php');
 ?>
-
+<?php
+    require ('navbar.php');
+?>
 
 <body>
 <div class="container-fluid">
         <div class="text-center">
-            <p style="padding-top:12px 5px; color:#9a171f; height: 50px; font-size: 24px;" >STATUS DE TUS PROYECTOS</p>
+            <p style="padding-top:12px 5px; color:#9a171f; height: 50px; font-size: 24px;" >STATUS DE TUS APLICACIONES</p>
 <!--$alumno !== null && count($alumno)>0 -->
 <?php
 
@@ -118,10 +121,12 @@ else{
 
 </div>
 </div>
-
-<?php
-    require ('./../admin/footer.php');
-?>
+<div style="background-color: #0E5184; color: #ffff; width: 100%; height: 115px; padding: 20px;">
+    Universidad Panamericana<br>
+    Derechos Reservados<br>
+    CENTROS CULTURALES DE MEXICO A.C.<br>
+    Aviso de privacidad<br>
+</div>
 
 
 </body>

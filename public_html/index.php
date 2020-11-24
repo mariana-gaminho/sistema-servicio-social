@@ -51,7 +51,9 @@ div.one {
 <body>
 
 
-<h3 style="padding:12px 5px; color:#FFFFFF;vertical-align: middle; height: 50px; background-color: #0E5184">SERVICIO SOCIAL</h3>
+<h3 style="padding:12px 5px; color:#FFFFFF;vertical-align: middle; height: 50px; background-color: #0E5184">
+    SERVICIO SOCIAL
+</h3>
 
 
 <div class="container-fluid">
@@ -67,6 +69,7 @@ div.one {
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="one d-flex justify-content-center">
                 <form action="/alumno/login_alumno.php" method="post">
+                <!-- <form action="/nanosoft_web/public_html/alumno/login_alumno.php" method="post">                 -->
                     <h2 class="text-center" >Alumno</h2>
                     <div class="col-md-12">
                         <img src="./img/alumnos.jpg" class="img-responsive img-rounded"><br><br>
