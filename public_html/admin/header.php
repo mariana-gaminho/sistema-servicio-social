@@ -16,7 +16,7 @@
   <div>
     <?php 
       if($_SESSION['login_admin'] !== null || $_SESSION['login_alumno'] !== null || $_SESSION['login_organizacion'] !== null) {
-        echo '<a href="" style="color:#ffff; padding-right: 10px;">
+        echo '<a href="/logout.php" style="color:#ffff; padding-right: 10px;">
         Logout
         <img class="logout-icon" src="../img/logout.png" alt="logout" width="20">
         </a>';

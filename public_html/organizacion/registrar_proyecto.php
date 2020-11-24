@@ -76,7 +76,7 @@ div.one {
 
                         <br><span id="error_form" style="color:red;"></span><br><br>
                         <div class="col text-center">
-                            <button type="submit" class="btn btn-success btn-block">Registrar</button>
+                            <button type="submit" class="btn btn-red btn-block">Registrar</button>
                         </div>
                     </div>
                 </form>
