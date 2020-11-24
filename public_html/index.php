@@ -26,7 +26,7 @@ if(!empty($_GET['Error']))//Quiere entrar un alumno
 <!-- Styles -->
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/style-responsive.css">
-<link rel="stylesheet" href="./css/login-style.css">
+<link rel="stylesheet" href="./css/admin-style.css">
 <!-- Icon -->
 <link rel="shortcut icon" href="./img/icono-up.png" />
 <!-- jQuery library -->
