@@ -14,6 +14,7 @@ if (isset($_GET['id']) && isset($_SESSION['login_admin']) && $_SESSION['login_ad
 }
 
 $alumno = $a->get_alumno($id_alumno);
+$proyecto  = $a->get_proyecto_alumno($alumno['proyecto_id']);
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,7 @@ $alumno = $a->get_alumno($id_alumno);
     ?>
     <div class="container"> 
         <div class="row d-flex justify-content-center" style="padding-top:30px;">
-            <div class="col-md-6 card" id="detalle-alumno">
+            <div class="col-md-6 card" id="detalle-alumno" style="overflow:auto;">
                 <div class="d-flex align-items-end flex-wrap" style="margin-bottom: 10px;">
                     <a href="resumen_alumnos.php">
                         <button
@@ -63,6 +64,9 @@ $alumno = $a->get_alumno($id_alumno);
                 </div>
                 <div style="border-bottom: 1px dashed; margin-top: 10px;">
                     <b>Cedula: </b><p><?php echo $alumno['cedula']; ?></p>
+                </div>
+                <div style="border-bottom: 1px dashed; margin-top: 10px;">
+                    <b>Proyecto: </b><p><?php echo $proyecto; ?></p>
                 </div>
             </div>                
         </div>
