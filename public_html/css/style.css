@@ -13,6 +13,10 @@ Website: http://Alvarez.is/
 
 /* Import fonts */
 @import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+@font-face {
+    font-family: 'Ruda';
+    src: url('../fonts/Ruda-Regular.ttf') format('truetype');
+  }
 
 /* BASIC THEME CONFIGURATION */
 body {
