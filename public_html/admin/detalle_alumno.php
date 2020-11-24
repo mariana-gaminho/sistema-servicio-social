@@ -35,7 +35,7 @@ $proyecto  = $a->get_proyecto_alumno($alumno['proyecto_id']);
     ?>
     <div class="container"> 
         <div class="row d-flex justify-content-center" style="padding-top:30px;">
-            <div class="col-md-6 card" id="detalle-alumno">
+            <div class="col-md-6 card" id="detalle-alumno" style="overflow:auto;">
                 <div class="d-flex align-items-end flex-wrap" style="margin-bottom: 10px;">
                     <a href="resumen_alumnos.php">
                         <button
@@ -69,6 +69,9 @@ $proyecto  = $a->get_proyecto_alumno($alumno['proyecto_id']);
                     <div style="border-bottom: 1px dashed; margin-top: 10px;">
                         <b>Proyecto: </b><p><?php echo $proyecto; ?></p>
                     </div>
+                </div>
+                <div style="border-bottom: 1px dashed; margin-top: 10px;">
+                    <b>Proyecto: </b><p><?php echo $proyecto; ?></p>
                 </div>
             </div>                
         </div>

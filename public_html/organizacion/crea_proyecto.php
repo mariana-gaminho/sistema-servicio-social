@@ -1,6 +1,8 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Proyecto.php";
+//require_once $_SERVER['DOCUMENT_ROOT']."/sistema-servicio-social/private/model/Proyecto.php";
+
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();

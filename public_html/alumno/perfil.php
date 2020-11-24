@@ -43,7 +43,7 @@ $alumno = $a -> get_alumno();
     <br>
     <br>
     <div class="row">
-      <div class="col"'>
+      <div class="col">
         <p style="padding-top:12px; color:#9a171f; font-size: 24px;"><?php echo $alumno[0]['alumno']; ?></p>
         <p style="color:#7d7f81; font-size: 18px;"><?php echo $alumno[0]['email']; ?></p>
       </div>
