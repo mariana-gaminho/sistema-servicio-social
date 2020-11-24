@@ -1,8 +1,8 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
-require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Organizacion.php";
-// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
-// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Organizacion.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Organizacion.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Organizacion.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();
@@ -28,30 +28,32 @@ if (null === $_SESSION['login_admin'] || !$_SESSION['login_admin']) {
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-6 card" style="margin-top:20px;">
 					<img src="../img/compromiso-social.png" alt="compromiso" width="70%;">
-					<h2 style="font-weight: bold; color: #45933a; margin-bottom: 20px;">
+					<h3 style="font-weight:bold; margin-bottom: 20px;">
 						Bienvenid@, <?php echo $_SESSION['nombre_admin']; ?>
-					</h2>
+					</h3>
 					<div style="width: 90%; margin-top: 20px;">					
 						<div class="d-flex justify-content-between">
-							<p style="font-weight: bold; font-size: 17px;">Resumen de alumnos</p><br>
+							<p style="font-weight: bold; font-size: 17px;">Resumen de Alumnos</p><br>
 							<a href="/admin/resumen_alumnos.php">
+							<!-- <a href="/nanosoft_web/public_html/admin/resumen_alumnos.php"> -->
 								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
 							</a>
 						</div>
 						<div class="d-flex justify-content-between">
-							<p style="font-weight: bold; font-size: 17px;">Resumen de organizaciones</p><br>
+							<p style="font-weight: bold; font-size: 17px;">Resumen de Organizaciones</p><br>
 							<a href="/admin/resumen_organizaciones.php">
+							<!-- <a href="/nanosoft_web/public_html/admin/resumen_organizaciones.php"> -->
 								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
 							</a>
 						</div>
 						<div class="d-flex justify-content-between">
-							<p style="font-weight: bold; font-size: 17px;">Resumen de proyectos</p><br>
+							<p style="font-weight: bold; font-size: 17px;">Resumen de Proyectos</p><br>
 							<a href="/admin/resumen_proyectos.php">
 								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
 							</a>
 						</div>
 						<div class="d-flex justify-content-between">
-							<p style="font-weight: bold; font-size: 17px;">Asignar alumnos a proyecto</p><br>
+							<p style="font-weight: bold; font-size: 17px;">Asignar alumnos a Proyecto</p><br>
 							<a href="">
 								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
 							</a>

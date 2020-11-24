@@ -20,7 +20,7 @@
                             <img src="../img/icono-up.png" alt="logo" width="70">
                             <h3 style="margin-left: 10px;">Compromiso<br>Social</h3>
                         </div>
-                        <form action="/admin/login_admin.php"  method="post">   
+                        <form action="/admin/login_admin.php"  method="post">
                         <!-- <form action="/nanosoft_web/public_html/admin/login_admin.php"  method="post"> -->
                             <div class="form-group">
                                 <label>Email</label> 

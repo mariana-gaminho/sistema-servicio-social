@@ -1,7 +1,7 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/core/Database.php";
-// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/core/Database.php";
+//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/core/Database.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();
@@ -68,12 +68,20 @@ class Admin extends Database {
         }
         foreach ($alumnos as $a) {
                     echo '
-                    <div style="border-style: solid; min-height:50px">
-                        Nombre: ' . $a['nombre'] . ', Email: ' . $a['email'] . '
-                        <a href="detalle_alumno.php?id='. $a['alumno_id'] .'"> <input type="button" class="btn btn-success" style="float:right; margin:3px" value="Detalles"> </a>
+                    <div
+                        class="d-flex align-items-center justify-content-between"
+                        style="border-bottom: 1px dashed; min-height: 50px; margin-top: 10px;"
+                    >
+                        <div class="">
+                            <b>Nombre: </b>' . $a['nombre'] . '
+                            <br>
+                            <b>Email: </b>' . $a['email'] . '
+                        </div>
+                        <a href="detalle_alumno.php?id='. $a['alumno_id'] .'">
+                            <input type="button" class="btn btn-red" style="float:right; margin:3px; font-size: 17px;" value="Detalles">
+                        </a>
                     </div>';
                 }
-
     }
     
     public function print_organizaciones() {
@@ -93,11 +101,19 @@ class Admin extends Database {
         }
         foreach ($organizaciones as $o) {
             echo '
-                    <div style="border-style: solid; min-height:50px">
-                        Nombre: ' . $o['nombre'] . ', Email: ' . $o['email'] . '
-                        <a href="/admin/detalle_organizacion.php?id='. $o['organizacion_id'] .'"> <input type="button" class="btn btn-success" style="float:right; margin:3px" value="Detalles"> </a>
+                    <div
+                        class="d-flex align-items-center justify-content-between"
+                        style="border-bottom: 1px dashed; min-height: 50px; margin-top: 10px;"
+                    >
+                        <div class="">
+                            <b>Nombre: </b>' . $o['nombre'] . '
+                            <br>
+                            <b>Email: </b>' . $o['email'] . '
+                        </div>
+                        <a href="detalle_organizacion.php?id='. $o['organizacion_id'] .'">
+                            <input type="button" class="btn btn-red" style="float:right; margin:3px; font-size: 17px;" value="Detalles">
+                        </a>
                     </div>';
-
                 }
         }
     
