@@ -1,6 +1,6 @@
 <?php
 //require_once $_SERVER['DOCUMENT_ROOT']."/sistema-servicio-social/private/model/Alumno.php";
-require_once $_SERVER['DOCUMENT_ROOT']."/private/model/Alumno.php";
+//require_once "../private/model/Alumno.php";
 
 
 if(!empty($_GET['Error']))//Quiere entrar un alumno
@@ -66,7 +66,7 @@ div.one {
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="one d-flex justify-content-center">
-                <form action="/sistema-servicio-social/public_html/alumno/login_alumno.php" method="post">
+                <form action="/alumno/login_alumno.php" method="post">
                     <h2 class="text-center" >Alumno</h2>
                     <div class="col-md-12">
                         <img src="./img/alumnos.jpg" class="img-responsive img-rounded"><br><br>
