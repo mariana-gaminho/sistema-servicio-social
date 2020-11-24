@@ -68,7 +68,7 @@ $proy = $o->get_proyectos($id_organizacion);
                         echo '
                         <div style="border: 1.5px solid; min-height:50px; margin-bottom: 3px; padding: 5px;">
                             ' . $proyecto['nombre'] . '
-                            <a href="/admin/detalle_proyecto.php?id='. $proyecto['proyecto_id'] .'">
+                            <a href="/admin/detalle_proyecto.php?id='. $proyecto['proyecto_id'] .'&org='. $org['organizacion_id'] .'">
                                 <input type="button" class="btn btn-red" style="float:right; margin:3px; font-size: 14px;" value="Detalles">
                             </a>
                         </div>
@@ -83,3 +83,4 @@ $proy = $o->get_proyectos($id_organizacion);
         require ('./footer.php');
     ?>
 </body>
+<!-- <a href="/admin/detalle_proyecto.php?id='. $proyecto['proyecto_id'] .'"> -->

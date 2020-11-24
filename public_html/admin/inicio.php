@@ -32,27 +32,28 @@ if (null === $_SESSION['login_admin'] || !$_SESSION['login_admin']) {
 						Bienvenid@, <?php echo $_SESSION['nombre_admin']; ?>
 					</h3>
 					<div style="width: 90%; margin-top: 20px;">					
-						<div class="d-flex justify-content-between">
+						<div class="d-flex justify-content-between align-items-center">
 							<p style="font-weight: bold; font-size: 17px;">Resumen de Alumnos</p><br>
 							<a href="/admin/resumen_alumnos.php">
 							<!-- <a href="/nanosoft_web/public_html/admin/resumen_alumnos.php"> -->
 								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
 							</a>
 						</div>
-						<div class="d-flex justify-content-between">
+						<div class="d-flex justify-content-between align-items-center">
 							<p style="font-weight: bold; font-size: 17px;">Resumen de Organizaciones</p><br>
 							<a href="/admin/resumen_organizaciones.php">
 							<!-- <a href="/nanosoft_web/public_html/admin/resumen_organizaciones.php"> -->
 								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
 							</a>
 						</div>
-						<div class="d-flex justify-content-between">
+						<div class="d-flex justify-content-between align-items-center">
 							<p style="font-weight: bold; font-size: 17px;">Resumen de Proyectos</p><br>
 							<a href="/admin/resumen_proyectos.php">
+							<!-- <a href="/nanosoft_web/public_html/admin/resumen_proyectos.php"> -->
 								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
 							</a>
 						</div>
-						<div class="d-flex justify-content-between">
+						<div class="d-flex justify-content-between align-items-center">
 							<p style="font-weight: bold; font-size: 17px;">Asignar alumnos a Proyecto</p><br>
 							<a href="">
 								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">

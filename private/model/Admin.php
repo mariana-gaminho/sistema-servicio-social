@@ -1,7 +1,7 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/core/Database.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/core/Database.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/core/Database.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();
@@ -133,13 +133,21 @@ class Admin extends Database {
 			echo $e->getMessage();
         }
         foreach ($proyectos as $p) {
-                    echo '
-                    <div style="border-style: solid; min-height:50px">
-                        Nombre: ' . $p['nombre'] . ', Descripcion: ' . $p['descripcion'] . '
-                        <a href="detalle_proyecto.php?id='. $p['organizacion_id'] .'"> <input type="button" class="btn btn-success" style="float:right; margin:3px" value="Detalles"> </a>
-                    </div>';
-                }
-
+            echo '
+            <div
+                class="d-flex align-items-center justify-content-between"
+                style="border-bottom: 1px dashed; min-height: 50px; margin-top: 10px;"
+            >
+                <div class="">
+                    <b>Nombre: </b>' . $p['nombre'] . '
+                    <br>
+                    <b>Descripcion: </b>' . $p['descripcion'] . '
+                </div>
+                <a href="detalle_proyecto.php?id='. $p['organizacion_id'] .'">
+                    <input type="button" class="btn btn-red" style="float:right; margin:3px; font-size: 17px;" value="Detalles">
+                </a>
+            </div>';
+        }
     }
     
         public function get_organizacion($id_organizacion) {
