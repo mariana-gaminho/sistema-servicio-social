@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE ) {
 }
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Alumno.php";
-
+//require_once $_SERVER['DOCUMENT_ROOT']."/sistema-servicio-social/private/model/Alumno.php";
 
 $a = new Alumno();
 

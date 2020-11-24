@@ -4,6 +4,7 @@ if (session_status() == PHP_SESSION_NONE ) {
 }
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Alumno.php";
+//require_once $_SERVER['DOCUMENT_ROOT']."/sistema-servicio-social/private/model/Alumno.php";
 
 $a = new Alumno();
 
@@ -15,48 +16,102 @@ $proyectos = $a -> ver_proyecto();
 <html>
 <head>
 <title>Proyectos</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+
+<style>
+div.one {
+  border-style: solid;
+  border-color: black;
+  border-radius: 25px;
+  
+}
+</style>
+
 </head>
 <body>
 
-<h1>Hola</h1>
-<h3>Los proyectos ativos son los siguientes</h3>
-
-<?php 
-if(count($proyectos)>0)
-{
-    for ($i = 0; $i < count($proyectos); $i++)
-    {
-        echo "<div class='container' style='border:solid 2px black;'>";
-        echo "<div class='row'>";
-        echo "<div class='col-sm-8'>";
-        echo "<h3>".$proyectos[$i]['Proyecto']."</h3>";
-        echo "</div>";
-        echo "<div class='col-sm-4'>";
-        echo "<a href='crea_solicitud.php?id=".$proyectos[$i]['proyecto_id']."' class='btn btn-success'>Solicitar</a>";
-        echo "</div>";
-        echo "</div>";
-        echo "<div class='row'>";
-        echo "<div class='col-sm-3'>";
-        echo "<p>Dias</p>";
-        echo "<p>".$proyectos[$i]['dias']."</p>";
-        echo "</div>";
-        echo "<div class='col-sm-2'>";
-        echo "<p>Horas</p>";
-        echo "<p>".$proyectos[$i]['horas']."</p>";
-        echo "</div>";
-        echo "<div class='col-sm-3'>";
-        echo "<p>Fechas</p>";
-        echo "<p>".$proyectos[$i]['fechas']."</p>";
-        echo "</div>";
-        echo "<div class='col-sm-4'>";
-        echo "<p><b>Organización: </b>".$proyectos[$i]['organizacion']."</p>";
-        echo "<p><b>Correo: </b>".$proyectos[$i]['email']."</p>";
-        echo "</div>";
-        echo "</div>";
-        echo "</div>";
-        echo "<br>";
-    }
-}
+<?php
+    require ('./../admin/header.php');
 ?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Detalles Proyecto</title>
+    <link rel="shortcut icon" href="../img/icono-up.png" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container-fluid">
+        <div class="text-center">
+            <p style="padding-top:12px 5px; color:#9a171f; height: 50px; font-size: 24px;" >PROYECTOS ACTIVOS</p>
+    
+    <!-- Aquí se imprimen los alumnos en proyectos de la organización -->
+    <?php
+        if ($proyectos == 0) {
+            //No hay alumnos
+            echo 'No hay proyectos activos';
+        } else {
+        foreach ($proyectos as $proyecto) {
+            echo '
+            <div class="row justify-content-center" style="padding-bottom:15px;">
+                <div class="card col-xs-12 col-md-5 ">
+                    <div class="justify-content-center">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h3>'.$proyecto['Proyecto'] .'</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p>Dias</p>
+                                <p>'.$proyecto['dias'].'</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p>Horas</p>
+                                <p>'.$proyecto['horas'].'</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <p>Fechas</p>
+                                <p>'.$proyecto['fechas'].'</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <p><b>Organización: </b>'.$proyecto['organizacion'].'</p>
+                                <p><b>Correo: </b>'.$proyecto['email'].'</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a href=crea_solicitud.php? id='.$proyecto['proyecto_id'].' class="btn btn-red btn-block">Solicitar</a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            ';
+            }
+        }
+    ?>
+    </div>
+</div>
+
+<?php
+    require ('./../admin/footer.php');
+?>
+
 </body>
+</html>
+
+
+<!--<h1>Hola</h1>
+<h3>Los proyectos ativos son los siguientes</h3> -->
+
+
+
