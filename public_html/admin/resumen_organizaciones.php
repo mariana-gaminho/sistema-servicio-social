@@ -34,7 +34,7 @@ $a = new Admin();
     </div>
      <div class="container"> 
         <div class="row d-flex justify-content-center" style="padding-top:30px;">
-            <div class="col-md-6 card">
+            <div class="col-md-6 card" style="overflow:auto;">
                 <div class="d-flex align-items-end" style="padding-bottom: 15px;">
                     <img src="../img/icono-up.png" alt="logo" width="70">
                     <h4 style="margin-left: 10px;">Organizaciones</h4>

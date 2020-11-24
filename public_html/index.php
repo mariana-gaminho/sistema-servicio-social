@@ -69,7 +69,6 @@ div.one {
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="one d-flex justify-content-center">
                 <form action="/alumno/login_alumno.php" method="post">
-                <!-- <form action="/nanosoft_web/public_html/alumno/login_alumno.php" method="post">                 -->
                     <h2 class="text-center" >Alumno</h2>
                     <div class="col-md-12">
                         <img src="./img/alumnos.jpg" class="img-responsive img-rounded"><br><br>
