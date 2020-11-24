@@ -15,7 +15,9 @@
   </h3>
   <div>
     <?php 
-      if($_SESSION['login_admin'] !== null || $_SESSION['login_alumno'] !== null || $_SESSION['login_organizacion'] !== null) {
+      if((isset($_SESSION['login_admin']) && $_SESSION['login_admin']) || 
+          (isset($_SESSION['login_alumno']) && $_SESSION['login_alumno']) || 
+          (isset($_SESSION['login_organizacion']) && $_SESSION['login_organizacion'])) {
         echo '<a href="/logout.php" style="color:#ffff; padding-right: 10px;">
         Logout
         <img class="logout-icon" src="../img/logout.png" alt="logout" width="20">
