@@ -35,8 +35,10 @@ div.one {
 <body>
 
 
-<h3 style="padding:12px 5px; color:#FFFFFF;vertical-align: middle; height: 50px; background-color: #0E5184">Servicio Social</h3>
-
+<?php
+    require ('./../admin/header.php');
+    require ('navbar-organizaciones.php');
+?>
 
 <div class="container-fluid">
     <div class="row">
@@ -47,11 +49,11 @@ div.one {
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="one d-flex justify-content-center">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="d-flex justify-content-center" style="-webkit-box-shadow: -1px 1px 9px 5px rgba(0,0,0,0.15); -moz-box-shadow: -1px 1px 9px 5px rgba(0,0,0,0.15); box-shadow: -1px 1px 9px 5px rgba(0,0,0,0.15); border-radius: 25px; height: 53rem; padding: 20px;">
                 <form name="form_registro" action="/organizacion/crea_organizacion.php" onsubmit="return validate_form()" method="post">
-                    <h2 class="text-center" >Introduce los datos de tu organización</h2>
+                    <h2 class="text-center">Introduce los datos de tu organización</h2>
                     <div class="col-md-12">
                         <label for="nombre_organizacion">Nombre de organización:</label><br>
                         <input class= "form-control" type="text" id="nombre_organizacion" name="nombre_organizacion">
@@ -88,27 +90,7 @@ div.one {
             Aviso de privacidad<br>
         </p>
     </div>
-    <div class="col-md-3">
-        <p>
-            Derechos Reservados<br>
-            CENTROS CULTURALES DE MEXICO A.C.<br>
-            Aviso de privacidad<br>
-        </p>
-    </div>
-    <div class="col-md-3">
-        <p>
-            Derechos Reservados<br>
-            CENTROS CULTURALES DE MEXICO A.C.<br>
-            Aviso de privacidad<br>
-        </p>
-    </div>
-    <div class="col-md-3">
-        <p>
-            Derechos Reservados<br>
-            CENTROS CULTURALES DE MEXICO A.C.<br>
-            Aviso de privacidad<br>
-        </p>
-    </div>
+    
 </div>
 
 <script>
