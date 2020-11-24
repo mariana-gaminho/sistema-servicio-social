@@ -23,7 +23,8 @@ $proyectos = $o->get_proyectos($_SESSION['id_organizacion']);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/admin-style.css">
     <link rel="shortcut icon" href="../img/icono-up.png" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="./../lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
     
 </head>
@@ -65,7 +66,7 @@ $proyectos = $o->get_proyectos($_SESSION['id_organizacion']);
                             <br>
                             <br>
                             <a href="/organizacion/detalle_proyecto.php?id='. $proyecto['proyecto_id'] .'">
-                                <input type="button" class="btn btn-success btn-block" style="float:right; margin:3px" value="Detalles">
+                                <input type="button" class="btn btn-block btn-red" style="float:right; margin:3px" value="Detalles">
                             </a>
                         </div>
                         ';
@@ -78,7 +79,7 @@ $proyectos = $o->get_proyectos($_SESSION['id_organizacion']);
                     <p style="height: 25px;"></p>
                         
                         <a href="/organizacion/registrar_proyecto.php">
-                        <input type="button" class="btn btn-success" style="margin:3px" value="Nuevo proyecto">
+                        <input type="button" class="btn btn-red" style="margin:3px" value="Nuevo proyecto">
                         </a>
                     </div>
 

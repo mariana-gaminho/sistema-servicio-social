@@ -70,9 +70,6 @@ $proyecto  = $a->get_proyecto_alumno($alumno['proyecto_id']);
                         <b>Proyecto: </b><p><?php echo $proyecto; ?></p>
                     </div>
                 </div>
-                <div style="border-bottom: 1px dashed; margin-top: 10px;">
-                    <b>Proyecto: </b><p><?php echo $proyecto; ?></p>
-                </div>
             </div>                
         </div>
     </div>
