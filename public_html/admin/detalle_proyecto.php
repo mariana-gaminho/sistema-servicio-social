@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();
@@ -83,6 +83,7 @@ $alumnos = $a->get_alumnos_proyecto($id_proyecto);
                 >
                     ALUMNOS
                 </h6>
+                <div style="overflow:auto;">
                 <?php
                     if ($alumnos == 0) {
                         //No hay alumnos
@@ -112,6 +113,7 @@ $alumnos = $a->get_alumnos_proyecto($id_proyecto);
                         }
                     }
                 ?>
+                </div>
             </div>                
         </div>
     </div>

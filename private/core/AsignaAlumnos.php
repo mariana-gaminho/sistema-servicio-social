@@ -1,6 +1,7 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Asignacion.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Asignacion.php";
 
 $obj = new Asignacion();
 

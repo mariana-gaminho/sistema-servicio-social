@@ -5,6 +5,7 @@ if (session_status() == PHP_SESSION_NONE ) {
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Alumno.php";
 //require_once $_SERVER['DOCUMENT_ROOT']."/sistema-servicio-social/private/model/Alumno.php";
+//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Alumno.php";
 
 $a = new Alumno();
 
@@ -34,6 +35,7 @@ div.one {
 
 <?php
     require ('./../admin/header.php');
+    require ('navbar.php');
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +46,9 @@ div.one {
     <link rel="shortcut icon" href="../img/icono-up.png" />
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/admin-style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-responsive.css">
 </head>
 
 <body>
@@ -101,11 +106,12 @@ div.one {
     ?>
     </div>
 </div>
-
-<?php
-    require ('./../admin/footer.php');
-?>
-
+<div style="background-color: #0E5184; color: #ffff; width: 100%; height: 115px; padding: 20px;">
+    Universidad Panamericana<br>
+    Derechos Reservados<br>
+    CENTROS CULTURALES DE MEXICO A.C.<br>
+    Aviso de privacidad<br>
+</div>
 </body>
 </html>
 
