@@ -1,6 +1,6 @@
 <?php
 //require_once $_SERVER['DOCUMENT_ROOT']."/sistema-servicio-social/private/model/Alumno.php";
-require_once $_SERVER['DOCUMENT_ROOT']."/private/model/Alumno.php";
+//require_once "../private/model/Alumno.php";
 
 
 if(!empty($_GET['Error']))//Quiere entrar un alumno
