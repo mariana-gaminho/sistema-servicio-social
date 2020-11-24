@@ -12,7 +12,7 @@ $a->login_alumno();
 
 if($_SESSION['login_alumno'])
 {
-    header('location:/sistema-servicio-social/public_html/alumno/aplicaciones.php');
+    header('location:/alumno/aplicaciones.php');
 } else {
     header('location:/?Error=CredencialesIncorrectas');
 }
