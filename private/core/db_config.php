@@ -5,6 +5,10 @@ class DB_Config {
     protected $username = "root";
     protected $password = "password";
     protected $dbname = "nanosoft";
+    // protected $servername = "mysql";
+    // protected $username = "root";
+    // protected $password = "tiger";
+    // protected $dbname = "nanosoft";
 
 }
 	

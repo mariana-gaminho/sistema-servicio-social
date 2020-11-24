@@ -1,6 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Organizacion.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Organizacion.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();

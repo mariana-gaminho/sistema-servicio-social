@@ -1,6 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Organizacion.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Organizacion.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();
@@ -12,43 +14,54 @@ if (null === $_SESSION['login_admin'] || !$_SESSION['login_admin']) {
 ?> 
 
 <html>
-    <head>
-        <Title>Index</Title>
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    </head>
-
-    <body>
-        <div class="container"> 
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Bienvenido, <?php echo $_SESSION['nombre_admin']; ?></h2>
-
-                    <form>
-                        
-                        <div class="form-group">
-                            <label>Resumen de alumnos</label> 
-                            <a href="/admin/resumen_alumnos.php"> <input type="button" class="btn btn-success" style="float:right; margin:3px" value="Continuar"> </a>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Resumen de organizaciones</label> 
-                            <a href="/admin/resumen_organizaciones.php"> <input type="button" class="btn btn-success" style="float:right; margin:3px" value="Continuar"> </a>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Resumen de proyectos</label> 
-                            <a href="/admin/resumen_proyectos.php"> <input type="button" class="btn btn-success" style="float:right; margin:3px" value="Continuar"> </a>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Asignar alumnos a proyecto</label> 
-                            <a href=""> <input type="button" class="btn btn-success" style="float:right; margin:3px" value="Continuar"> </a>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-    </body>
-
+	<head>
+		<Title>Admin Home</Title>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<!-- Icon -->
+		<link rel="shortcut icon" href="../img/icono-up.png" />
+	</head>
+	<body>
+		<?php
+				require ('./header.php');
+		?>
+		<div class="container"> 
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-6 card" style="margin-top:20px;">
+					<img src="../img/compromiso-social.png" alt="compromiso" width="70%;">
+					<h2 style="font-weight: bold; color: #45933a; margin-bottom: 20px;">
+						Bienvenid@, <?php echo $_SESSION['nombre_admin']; ?>
+					</h2>
+					<div style="width: 90%; margin-top: 20px;">					
+						<div class="d-flex justify-content-between">
+							<p style="font-weight: bold; font-size: 17px;">Resumen de alumnos</p><br>
+							<a href="/admin/resumen_alumnos.php">
+								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
+							</a>
+						</div>
+						<div class="d-flex justify-content-between">
+							<p style="font-weight: bold; font-size: 17px;">Resumen de organizaciones</p><br>
+							<a href="/admin/resumen_organizaciones.php">
+								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
+							</a>
+						</div>
+						<div class="d-flex justify-content-between">
+							<p style="font-weight: bold; font-size: 17px;">Resumen de proyectos</p><br>
+							<a href="/admin/resumen_proyectos.php">
+								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
+							</a>
+						</div>
+						<div class="d-flex justify-content-between">
+							<p style="font-weight: bold; font-size: 17px;">Asignar alumnos a proyecto</p><br>
+							<a href="">
+								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php
+				require ('./footer.php');
+		?>
+	</body>
 </html>
