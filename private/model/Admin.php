@@ -50,10 +50,40 @@ class Admin extends Database {
 			echo $e->getMessage();
         }
     }
+
+    public function get_proyecto_alumno($id_proyecto) {
+        if ($id_proyecto == '0') {
+            return "Sin proyecto";
+        }
+        try {
+            //Marca el estatus de la aplicación como acpetado
+            $query = "SELECT nombre
+                        FROM proyectos
+                        WHERE proyecto_id=:p_id";
+            
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->bindParam(':p_id', $id_proyecto, PDO::PARAM_STR);
+
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+            if ($stmt->rowCount() >= 1) {
+                $results = $stmt->fetch();
+                return $results['nombre'];
+            } else {
+                $results = [];
+                return $results;
+            }
+
+        } catch (PDOException $e) {
+            echo "Error in get_alumnos_proyectos: " . $e->getMessage();
+        }
+    }
     
     public function print_alumnos() {
         try {
-			$query = "SELECT nombre, email, alumno_id
+			$query = "SELECT nombre, email, alumno_id, proyecto_id
 						FROM alumnos";
 			$stmt = $this->conn->prepare($query);
 				
@@ -67,6 +97,7 @@ class Admin extends Database {
 			echo $e->getMessage();
         }
         foreach ($alumnos as $a) {
+                    $proyecto = $this->get_proyecto_alumno($a['proyecto_id']);
                     echo '
                     <div
                         class="d-flex align-items-center justify-content-between"
@@ -76,6 +107,8 @@ class Admin extends Database {
                             <b>Nombre: </b>' . $a['nombre'] . '
                             <br>
                             <b>Email: </b>' . $a['email'] . '
+                            <br>
+                            <b>Proyecto: </b>' . $proyecto . '
                         </div>
                         <a href="detalle_alumno.php?id='. $a['alumno_id'] .'">
                             <input type="button" class="btn btn-red" style="float:right; margin:3px; font-size: 17px;" value="Detalles">

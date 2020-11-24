@@ -55,7 +55,7 @@ if (null === $_SESSION['login_admin'] || !$_SESSION['login_admin']) {
 						</div>
 						<div class="d-flex justify-content-between align-items-center">
 							<p style="font-weight: bold; font-size: 17px;">Asignar alumnos a Proyecto</p><br>
-							<a href="">
+							<a href="/admin/asignar_alumnos.php">
 								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
 							</a>
 						</div>
