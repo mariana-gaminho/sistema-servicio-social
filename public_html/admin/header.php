@@ -9,8 +9,20 @@
   <title>Header</title>
 </head>
 <body>
-  <h3 style="padding:12px 5px; color:#FFFFFF;vertical-align: middle; height: 50px; background-color: #0E5184">
+<div class="d-flex justify-content-between align-items-center" style="padding:12px 5px; vertical-align: middle; height: 50px; background-color: #0E5184">
+  <h3 style="color:#ffff; margin-bottom: 0;">
     SERVICIO SOCIAL
   </h3>
+  <div>
+    <?php 
+      if($_SESSION['login_admin'] !== null || $_SESSION['login_alumno'] !== null || $_SESSION['login_organizacion'] !== null) {
+        echo '<a href="" style="color:#ffff; padding-right: 10px;">
+        Logout
+        <img class="logout-icon" src="../img/logout.png" alt="logout" width="20">
+        </a>';
+      }
+    ?>
+  </div>
+</div>
 </body>
 </html>
