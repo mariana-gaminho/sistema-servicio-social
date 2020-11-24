@@ -152,7 +152,7 @@ class Admin extends Database {
     
     public function print_proyectos() {
         try {
-			$query = "SELECT nombre, descripcion, organizacion_id
+			$query = "SELECT proyecto_id, nombre, descripcion, organizacion_id
 						FROM proyectos";
 			$stmt = $this->conn->prepare($query);
 				
@@ -176,7 +176,7 @@ class Admin extends Database {
                     <br>
                     <b>Descripcion: </b>' . $p['descripcion'] . '
                 </div>
-                <a href="detalle_proyecto.php?id='. $p['organizacion_id'] .'">
+                <a href="detalle_proyecto.php?id='. $p['proyecto_id'] .'">
                     <input type="button" class="btn btn-red" style="float:right; margin:3px; font-size: 17px;" value="Detalles">
                 </a>
             </div>';

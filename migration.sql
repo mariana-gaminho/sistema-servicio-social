@@ -75,146 +75,398 @@ VALUES ('PENDIENTE', 16, 2);
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Alex', 'alex@gmail.com', 8, 420, 0, 'contrasena', 'CED3');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 3);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 2, 3);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 9, 3);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Pedro', 'pedro@gmail.com', 5, 120, 0, 'contrasena', 'CED4');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 8, 4);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 2, 4);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Carlos', 'calrlos@gmail.com', 7, 100, 0, 'contrasena', 'CED5');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 17, 5);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 4, 5);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 16, 5);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Natalia', 'natalia@gmail.com', 3, 240, 0, 'contrasena', 'CED6');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 11, 6);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 14, 6);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 16, 6);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Carla', 'carla@gmail.com', 8, 100, 0, 'contrasena', 'CED7');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 15, 7);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 16, 7);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 17, 7);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Mariana', 'mariana@gmail.com', 5, 200, 0, 'contrasena', 'CED8');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 6, 8);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Pablo', 'pablo@gmail.com', 7, 480, 0, 'contrasena', 'CED9');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 12, 9);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Alfonso', 'alfonso@gmail.com', 7, 480, 0, 'contrasena', 'CED10');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 11, 10);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Ximena', 'ximena@gmail.com', 4, 120, 0, 'contrasena', 'CED11');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 9, 11);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 10, 11);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Fatima', 'fatima@gmail.com', 4, 150, 0, 'contrasena', 'CED12');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 12);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Regina', 'regina@gmail.com', 6, 200, 0, 'contrasena', 'CED13');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 14, 13);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 15, 13);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 16, 13);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Ana', 'ana@gmail.com', 1, 0, 0, 'contrasena', 'CED14');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 5, 14);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Daniel', 'daniel@gmail.com', 2, 60, 0, 'contrasena', 'CED15');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 15);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Rodrigo', 'rodrigo@gmail.com', 3, 80, 0, 'contrasena', 'CED16');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 11, 16);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 18, 16);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Braulio', 'braulio@gmail.com', 5, 240, 0, 'contrasena', 'CED17');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 9, 17);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Fernando', 'fernando@gmail.com', 7, 120, 0, 'contrasena', 'CED18');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 15, 18);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 16, 18);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 17, 18);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Brian', 'brian@gmail.com', 8, 60, 0, 'contrasena', 'CED19');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 15, 19);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 16, 19);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 17, 19);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Diego', 'diego@gmail.com', 6, 320, 0, 'contrasena', 'CED20');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 4, 20);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 20);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Bernardo', 'bernardo@gmail.com', 3, 180, 0, 'contrasena', 'CED21');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 18, 21);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Antonio', 'antonio@gmail.com', 4, 320, 0, 'contrasena', 'CED22');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 14, 22);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Maria', 'maria@gmail.com', 8, 120, 0, 'contrasena', 'CED23');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 15, 23);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 16, 23);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 17, 23);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Monica', 'monica@gmail.com', 4, 180, 0, 'contrasena', 'CED24');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 10, 24);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Isabela', 'isabela@gmail.com', 7, 120, 0, 'contrasena', 'CED25');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 15, 25);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 16, 25);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 17, 25);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Daniela', 'daniela@gmail.com', 3, 60, 0, 'contrasena', 'CED26');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 9, 26);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 10, 26);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Paulette', 'paulette@gmail.com', 7, 480, 0, 'contrasena', 'CED27');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 5, 27);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Gloria', 'gloria@gmail.com', 3, 320, 0, 'contrasena', 'CED28');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 11, 28);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Fermin', 'fermin@gmail.com', 6, 320, 0, 'contrasena', 'CED29');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 29);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Nadia', 'nadia@gmail.com', 4, 120, 0, 'contrasena', 'CED30');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 30);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 19, 30);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Paulina', 'paulina@gmail.com', 3, 240, 0, 'contrasena', 'CED31');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 18, 31);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Fernanda', 'fernanda@gmail.com', 2, 60, 0, 'contrasena', 'CED32');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 18, 32);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Alejandra', 'alejandra@gmail.com', 5, 180, 0, 'contrasena', 'CED33');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 8, 33);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 33);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 6, 33);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Sebastian', 'sebastian@gmail.com', 1, 60, 0, 'contrasena', 'CED34');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 19, 34);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Fabricio', 'fabricio@gmail.com', 6, 240, 0, 'contrasena', 'CED35');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 18, 35);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 19, 35);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Natasha', 'natasha@gmail.com', 3, 220, 0, 'contrasena', 'CED36');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 12, 36);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Naomi', 'naomi@gmail.com', 6, 320, 0, 'contrasena', 'CED37');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 14, 37);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 37);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('William', 'william@gmail.com', 3, 120, 0, 'contrasena', 'CED38');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 2, 38);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Dafne', 'dafne@gmail.com', 2, 60, 0, 'contrasena', 'CED39');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 39);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Alonso', 'alonso@gmail.com', 4, 60, 0, 'contrasena', 'CED40');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 18, 40);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 19, 40);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Rosa', 'rosa@gmail.com', 4, 320, 0, 'contrasena', 'CED41');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 8, 41);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Octavio', 'octavio@gmail.com', 5, 120, 0, 'contrasena', 'CED42');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 8, 42);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 14, 42);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Francisco', 'francisco@gmail.com', 3, 80, 0, 'contrasena', 'CED43');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 43);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Jorge', 'jorge@gmail.com', 5, 240, 0, 'contrasena', 'CED44');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 44);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 18, 44);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Segio', 'sergio@gmail.com', 3, 60, 0, 'contrasena', 'CED45');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 8, 45);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Santiago', 'santiago@gmail.com', 2, 120, 0, 'contrasena', 'CED46');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 19, 46);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Fabian', 'fabian@gmail.com', 7, 60, 0, 'contrasena', 'CED47');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 15, 18);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 16, 18);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 17, 18);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Rebeca', 'rebeca@gmail.com', 4, 320, 0, 'contrasena', 'CED48');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 19, 48);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Pamela', 'pamela@gmail.com', 5, 120, 0, 'contrasena', 'CED49');
 
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 8, 49);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 14, 49);
+
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Lucia', 'lucia@gmail.com', 3, 60, 0, 'contrasena', 'CED50');
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 4, 50);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 7, 50);
+
+INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
+VALUES ('PENDIENTE', 8, 50);
 
 INSERT INTO organizaciones (nombre, email, password)
 VALUES ('Unidos', 'unidos@gmail.com', 'contrasena');

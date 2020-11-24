@@ -40,7 +40,7 @@ $alumnos = $a->get_alumnos_proyecto($id_proyecto);
             <div class="col-md-6 card" id="informacion_organizacion">
                 <div class="d-flex align-items-end flex-wrap" style="margin-bottom: 10px;">
                     <?php
-                    if($id_organizacion != null) {
+                    if(isset($id_organizacion)) {
                         echo '<a href="/admin/detalle_organizacion.php?id='. $id_organizacion .'">
                         <button
                             type="button"
