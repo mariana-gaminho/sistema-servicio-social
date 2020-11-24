@@ -1,6 +1,6 @@
 <?php
 //require_once $_SERVER['DOCUMENT_ROOT']."/sistema-servicio-social/private/model/Alumno.php";
-require_once $_SERVER['DOCUMENT_ROOT']."/private/model/Alumno.php";
+//require_once "../private/model/Alumno.php";
 
 
 if(!empty($_GET['Error']))//Quiere entrar un alumno
@@ -51,7 +51,9 @@ div.one {
 <body>
 
 
-<h3 style="padding:12px 5px; color:#FFFFFF;vertical-align: middle; height: 50px; background-color: #0E5184">SERVICIO SOCIAL</h3>
+<h3 style="padding:12px 5px; color:#FFFFFF;vertical-align: middle; height: 50px; background-color: #0E5184">
+    SERVICIO SOCIAL
+</h3>
 
 
 <div class="container-fluid">

@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
 
 $admin = new Admin();
 $admin->login_admin();

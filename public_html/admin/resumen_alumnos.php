@@ -46,7 +46,7 @@ $a = new Admin();
                     <img src="../img/icono-up.png" alt="logo" width="70">
                     <h4 style="margin-left: 10px;">Resumen Alumnos</h4>
                 </div>
-                <div> <?php $alumnos = $a->print_alumnos(); ?> </div>
+                <div style="overflow:auto;"> <?php $alumnos = $a->print_alumnos(); ?> </div>
             </div>
         </div>
     </div>

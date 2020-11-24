@@ -50,4 +50,10 @@ footer {
   filter: invert(100%);
 }
 
+/* Navbar */
+.logout-icon {
+  max-width: 20px;
+  filter: invert(100%);
+}
+
 

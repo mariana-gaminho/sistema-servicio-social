@@ -1,8 +1,6 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/core/Database.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/sistema-servicio-social/private/core/Database.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/core/Database.php";
 
 class Proyecto extends Database {
     

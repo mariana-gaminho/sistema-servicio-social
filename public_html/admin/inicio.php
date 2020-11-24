@@ -53,10 +53,14 @@ if (null === $_SESSION['login_admin'] || !$_SESSION['login_admin']) {
 								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
 							</a>
 						</div>
-						<div class="d-flex justify-content-between align-items-center">
-							<p style="font-weight: bold; font-size: 17px;">Asignar alumnos a Proyecto</p><br>
+						<div class="d-flex justify-content-between">
+						<div class="">
+							<p style="font-weight: bold; font-size: 17px; margin-bottom: 3px;">Asignar alumnos a Proyecto</p>
+							<label for="">Al hacer click en Asignar, se asignarán <br>los proyectos a los alumnos de manera automática.</label>
+						</div>
 							<a href="/admin/asignar_alumnos.php">
-								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Continuar">
+							<!-- <a href="/nanosoft_web/public_html/admin/asignar_alumnos.php"> -->
+								<input type="button" class="btn btn-red" style="float:right; margin:3px" value="Asignar">
 							</a>
 						</div>
 					</div>

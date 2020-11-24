@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();
@@ -60,6 +60,7 @@ $proy = $o->get_proyectos($id_organizacion);
                 >
                     PROYECTOS
                 </h6>
+                <div style="overflow:auto;">
                 <?php
                 if ($proy == 0) {
                     echo 'No hay proyectos registrados';
@@ -76,6 +77,7 @@ $proy = $o->get_proyectos($id_organizacion);
                     }
                 }
                 ?>
+                </div>
             </div>                
         </div>
     </div>

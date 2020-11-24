@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();
@@ -50,20 +50,25 @@ $proyecto  = $a->get_proyecto_alumno($alumno['proyecto_id']);
                         INFORMACIÓN DE ALUMNO
                     </h3>
                 </div>
-                <div style="border-bottom: 1px dashed; margin-top: 10px;">
-                    <b>Nombre: </b><p><?php echo $alumno['nombre']; ?></p>
-                </div>
-                <div style="border-bottom: 1px dashed; margin-top: 10px;">
-                    <b>Email: </b><p><?php echo $alumno['email']; ?></p>
-                </div>
-                <div style="border-bottom: 1px dashed; margin-top: 10px;">
-                    <b>Semestre: </b><p><?php echo $alumno['semestre']; ?></p>
-                </div>
-                <div style="border-bottom: 1px dashed; margin-top: 10px;">
-                    <b>Horas: </b><p><?php echo $alumno['horas']; ?></p>
-                </div>
-                <div style="border-bottom: 1px dashed; margin-top: 10px;">
-                    <b>Cedula: </b><p><?php echo $alumno['cedula']; ?></p>
+                <div style="overflow:auto;">
+                    <div style="border-bottom: 1px dashed; margin-top: 10px;">
+                        <b>Nombre: </b><p><?php echo $alumno['nombre']; ?></p>
+                    </div>
+                    <div style="border-bottom: 1px dashed; margin-top: 10px;">
+                        <b>Email: </b><p><?php echo $alumno['email']; ?></p>
+                    </div>
+                    <div style="border-bottom: 1px dashed; margin-top: 10px;">
+                        <b>Semestre: </b><p><?php echo $alumno['semestre']; ?></p>
+                    </div>
+                    <div style="border-bottom: 1px dashed; margin-top: 10px;">
+                        <b>Horas: </b><p><?php echo $alumno['horas']; ?></p>
+                    </div>
+                    <div style="border-bottom: 1px dashed; margin-top: 10px;">
+                        <b>Cedula: </b><p><?php echo $alumno['cedula']; ?></p>
+                    </div>
+                    <div style="border-bottom: 1px dashed; margin-top: 10px;">
+                        <b>Proyecto: </b><p><?php echo $proyecto; ?></p>
+                    </div>
                 </div>
                 <div style="border-bottom: 1px dashed; margin-top: 10px;">
                     <b>Proyecto: </b><p><?php echo $proyecto; ?></p>

@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Admin.php";
-//require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
+// require_once $_SERVER['DOCUMENT_ROOT']."/nanosoft_web/private/model/Admin.php";
 
 if (session_status() == PHP_SESSION_NONE ) {
     session_start();
@@ -39,7 +39,7 @@ $a = new Admin();
                     <img src="../img/icono-up.png" alt="logo" width="70">
                     <h4 style="margin-left: 10px;">Organizaciones</h4>
                 </div>
-                <div> <?php $organizaciones = $a->print_organizaciones(); ?> </div>
+                <div style="overflow:auto;"> <?php $organizaciones = $a->print_organizaciones(); ?> </div>
             </div>
         </div>
     </div>
