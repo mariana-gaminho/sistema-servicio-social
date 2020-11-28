@@ -127,18 +127,23 @@ class Alumno extends Database {
 	public function get_alumno(){
 		try {
 			$ID = $_SESSION['id_alumno'];
-			$query = "SELECT alumnos.nombre AS alumno, email, semestre, alumnos.horas, proyectos.nombre AS proyecto
+			$query = "SELECT alumnos.nombre AS alumno, email, semestre AS semestre, alumnos.horas AS horas, proyectos.nombre AS proyecto
 			FROM alumnos
-			INNER JOIN proyectos ON proyectos.proyecto_id = alumnos.proyecto_id
-			WHERE alumno_id = :id";
+			LEFT JOIN proyectos ON proyectos.proyecto_id = alumnos.proyecto_id
+			WHERE alumnos.alumno_id = :id";
 			$stmt = $this->conn->prepare($query);
 
 			$stmt->bindParam(':id', $ID , PDO::PARAM_STR);
 				
 			$stmt->execute();
 			$stmt->setFetchMode(PDO::FETCH_ASSOC);
+			
 			if ($stmt->rowCount() >= 1) {    
-				return $alumno = $stmt->fetchAll();
+				$alumno = $stmt->fetchAll();
+				if ($alumno[0]['proyecto'] == null) {
+					$alumno[0]['proyecto'] = 'Ninguno';
+				}
+				return $alumno;
 			}
 		}
 		catch(PDOException $e) {
@@ -172,7 +177,7 @@ class Alumno extends Database {
         }
 	}
 
-	public function ver_proyecto(){
+	/*public function ver_proyecto(){
 		try {
 			$query = "SELECT proyectos.nombre AS Proyecto, horas, dias, fechas, organizaciones.nombre AS organizacion, email, proyecto_id
 			FROM proyectos
@@ -184,6 +189,52 @@ class Alumno extends Database {
 			$stmt->setFetchMode(PDO::FETCH_ASSOC);
 			if ($stmt->rowCount() >= 1) {    
 				return $alumno = $stmt->fetchAll();
+			}
+		}
+		catch(PDOException $e) {
+			echo $e->getMessage();
+        }
+	}*/
+
+	public function ver_proyecto(){
+		try {
+			$ID = $_SESSION['id_alumno'];
+			$query ="SELECT cedula FROM alumnos WHERE alumno_id = :id";
+			$stmt = $this->conn->prepare($query);
+			$stmt->bindParam(':id', $ID , PDO::PARAM_STR);
+			$stmt->execute();
+			$stmt->setFetchMode(PDO::FETCH_ASSOC);
+			if ($stmt->rowCount() >= 1) {    
+				$alumno = $stmt->fetch();
+				if ($alumno['cedula']!="0"){
+					$query = "SELECT proyectos.nombre AS Proyecto, horas, dias, fechas, organizaciones.nombre AS organizacion, email, proyecto_id
+					FROM proyectos
+					Inner JOIN organizaciones
+					On proyectos.organizacion_id = organizaciones.organizacion_id
+					WHERE proyectos.nombre != 'Voluntariado'";
+					$stmt = $this->conn->prepare($query);
+					
+					$stmt->execute();
+					$stmt->setFetchMode(PDO::FETCH_ASSOC);
+					if ($stmt->rowCount() >= 1) {    
+						return $alumno = $stmt->fetchAll();
+					}
+				}
+				else
+				{
+					$query = "SELECT proyectos.nombre AS Proyecto, horas, dias, fechas, organizaciones.nombre AS organizacion, email, proyecto_id 
+					FROM proyectos 
+					Inner JOIN organizaciones 
+					On proyectos.organizacion_id = organizaciones.organizacion_id 
+					WHERE proyectos.nombre = 'Voluntariado'";
+					$stmt = $this->conn->prepare($query);
+					
+					$stmt->execute();
+					$stmt->setFetchMode(PDO::FETCH_ASSOC);
+					if ($stmt->rowCount() >= 1) {    
+						return $alumno = $stmt->fetchAll();
+					}
+				}
 			}
 		}
 		catch(PDOException $e) {
