@@ -106,12 +106,6 @@ div.one {
     ?>
     </div>
 </div>
-<div style="background-color: #0E5184; color: #ffff; width: 100%; height: 115px; padding: 20px;">
-    Universidad Panamericana<br>
-    Derechos Reservados<br>
-    CENTROS CULTURALES DE MEXICO A.C.<br>
-    Aviso de privacidad<br>
-</div>
 </body>
 </html>
 
