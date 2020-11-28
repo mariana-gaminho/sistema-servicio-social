@@ -49,16 +49,10 @@ CREATE TABLE aplicaciones (
 );
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
-VALUES ('Pepe', 'pepe@gmail.com', 3, 120, 0, 'contrasena', 'CED1');
+VALUES ('Pepe', 'pepe@gmail.com', 3, 120, 0, 'contrasena', '0');
 
 INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
-VALUES ('PENDIENTE', 4, 1);
-
-INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
-VALUES ('PENDIENTE', 2, 1);
-
-INSERT INTO aplicaciones (estatus, proyecto_id, alumno_id)
-VALUES ('PENDIENTE', 5, 1);
+VALUES ('PENDIENTE', 1, 1);
 
 INSERT INTO alumnos (nombre, email, semestre, horas, proyecto_id, password, cedula)
 VALUES ('Juanito', 'juanito@gmail.com', 6, 320, 0, 'contrasena', 'CED2');
@@ -497,6 +491,12 @@ VALUES ('Semillas', 'semillas@gmail.com', 'contrasena');
 
 INSERT INTO organizaciones (nombre, email, password)
 VALUES ('Sinergia', 'sinergia@gmail.com', 'contrasena');
+
+INSERT INTO organizaciones (nombre, email, password)
+VALUES ('Compromiso Social UP', 'compromiso@gmail.com', 'contrasena');
+
+INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id, descripcion, capacidad, alumnos_inscritos)
+VALUES ('Voluntariado', 60, 'Sábado', 'Noviembre', 11, 'Taller del voluntariado', 300, 0);
 
 INSERT INTO proyectos (nombre, horas, dias, fechas, organizacion_id, descripcion, capacidad, alumnos_inscritos)
 VALUES ('Campamento Unidos', 100, 'Martes', 'Enero', 1, 'Proyecto acerca de un campamento de unidos', 10, 0);

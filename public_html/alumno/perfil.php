@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/../private/model/Alumno.php";
 
 $a = new Alumno();
 
-$alumno = $a -> get_alumno();
+$alumno = $a->get_alumno();
 
 ?>
 
@@ -50,7 +50,7 @@ $alumno = $a -> get_alumno();
     </div>
 
     <br>
-
+    
     <div class="row justify-content-center" style="padding-bottom:15px;">
       <div class="justify-content-center">
         <div class="row">
