@@ -36,3 +36,7 @@ Para probar los diferentes perfiles de usuario en el sistema se pueden utilizar 
 Para acceder al login de Compromiso Social se debe entrar [a esta ruta](https://nanosoft-web.000webhostapp.com/admin).\
 **Usuario:** iara@up.edu.mx\
 **Contraseña:** contrasena
+
+## Nota
+
+Si se quiere probar con otros usuarios diferentes a los mencionados anteriormente, sus credenciales se pueden obtener del archivo **database_creation.sql** ubicado en la raíz del proyecto.
