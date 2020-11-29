@@ -39,4 +39,4 @@ Para acceder al login de Compromiso Social se debe entrar [a esta ruta](https://
 
 ## Nota
 
-Si se quiere probar con otros usuarios diferentes a los mencionados anteriormente, sus credenciales se pueden obtener del archivo **database_creation.sql** ubicado en la raíz del proyecto.
+Si se quiere probar con usuarios distintos a los mencionados anteriormente, sus credenciales se pueden obtener del archivo **database_creation.sql** ubicado en la raíz del proyecto.
